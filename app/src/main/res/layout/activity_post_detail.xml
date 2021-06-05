@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    tools:context=".Activities.PostDetailActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/postdetail_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:transitionName="post_detail_img_transition" />
+
+    <Button
+        android:id="@+id/backBtn2"
+        android:layout_width="27.5dp"
+        android:layout_height="27.5dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_back"
+        android:backgroundTint="@color/White"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <kr.co.prnd.readmore.ReadMoreTextView
+        android:id="@+id/postdetail_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:autoLink="web"
+        android:fontFamily="@font/quicksand_regular"
+        android:lineSpacingExtra="2dp"
+        android:linksClickable="true"
+        android:text="Description"
+        android:textColor="@color/White"
+        android:textColorLink="@color/MyOpenChatColor"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/userinfo_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/postdetail_comment"
+        app:readMoreColor="@color/Grey"
+        app:readMoreMaxLine="3"
+        app:readMoreText=" ...더보기" />
+
+    <LinearLayout
+        android:id="@+id/userinfo_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/postdetail_comment">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/postdetail_profile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/app_icon_512" />
+
+        <TextView
+            android:id="@+id/postdetail_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:maxLines="1"
+            android:text="Username"
+            android:textColor="@color/White"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/postdetail_like"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/ic_like"
+        android:backgroundTint="@color/White"
+        app:layout_constraintBottom_toTopOf="@id/postdetail_likecount"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/postdetail_likecount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="0"
+        android:textColor="@color/White"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/postdetail_comment"
+        app:layout_constraintLeft_toLeftOf="@id/postdetail_comment"
+        app:layout_constraintRight_toRightOf="@id/postdetail_comment" />
+
+    <ImageView
+        android:id="@+id/postdetail_comment"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/ic_comment"
+        app:layout_constraintBottom_toTopOf="@id/postdetail_commenttxt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:tint="@color/White" />
+
+    <TextView
+        android:id="@+id/postdetail_commenttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="댓글"
+        android:textColor="@color/White"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/postdetail_reportbtn"
+        app:layout_constraintLeft_toLeftOf="@id/postdetail_reportbtn"
+        app:layout_constraintRight_toRightOf="@id/postdetail_reportbtn" />
+
+    <ImageView
+        android:id="@+id/postdetail_reportbtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/ic_report_outline"
+        app:layout_constraintBottom_toTopOf="@id/postdetail_reporttxt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:tint="@color/White" />
+
+    <TextView
+        android:id="@+id/postdetail_reporttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="신고"
+        android:textColor="@color/White"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/postdetail_comment"
+        app:layout_constraintRight_toRightOf="@id/postdetail_comment" />
+</androidx.constraintlayout.widget.ConstraintLayout>

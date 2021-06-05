@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFD195</color>
+    <color name="colorPrimaryDark">#f0f1f2</color>
+    <color name="colorAccent">#696969</color>
+
+    <color name="SkyBlue">#3EA6FF</color>
+    <color name="Blue">#188fde</color>
+    <color name="White">#fff</color>
+    <color name="Black">#000</color>
+    <color name="LightGrey">#D3D3D3</color>
+    <color name="Grey">#808080</color>
+    <color name="DarkGrey">#212121</color>
+    <color name="WhiteSmoke">#f4f4f4</color>
+    <color name="Red">#FF0000</color>
+    <color name="OneiricDiary">#e4cced</color>
+    <color name="DarkPurple">#643991</color>
+    <color name="Green">#3fba8f</color>
+    <color name="LightGreen">#64c466</color>
+    <color name="Lime">#32CD32</color>
+    <color name="Orange">#fcae53</color>
+    <color name="OneReeler">#212B47</color>
+    <color name="Yellow">#fae64d</color>
+    <color name="MyOpenChatColor">#4c5df5</color>
+    <color name="OCGreen">#47a677</color>
+    <color name="BrightGold">#FFF099</color>
+    <color name="SplashScreenColor">#cac3ba</color>
+    <color name="WarmRed">#F9423A</color>
+    <color name="AppThemeColor">#FFD195</color>
+
+    <color name="gnt_test_background_color">#00F4F4F4</color>
+    <color name="gnt_test_background_color_2">#00A3A3A3</color>
+    <color name="gnt_black">#000000</color>
+    <color name="gnt_white">#FFFFFF</color>
+    <color name="gnt_red">#FF0000</color>
+    <color name="gnt_green">#00FF00</color>
+    <color name="gnt_blue">#4285f4</color>
+    <color name="gnt_ad_green">#3A6728</color>
+    <color name="gnt_gray">#808080</color>
+    <color name="gnt_outline">#E0E0E0</color>
+</resources>

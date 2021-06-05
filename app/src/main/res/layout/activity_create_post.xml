@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CreatePostActivity"
+    android:background="?attr/WhiteToDarkGrey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addTag_toolbar_cons"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="?attr/WhiteToDarkGrey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/createpost_close_btn"
+            android:layout_width="27.5dp"
+            android:layout_height="27.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_close"
+            android:backgroundTint="?attr/BlackToWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게시물 만들기"
+            android:textColor="?attr/BlackToWhite"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumbarungothic_bold"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/createpost_close_btn"/>
+        <ImageView
+            android:id="@+id/upload_tag_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_done"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="7.5dp"
+            app:tint="@color/LightGreen" />
+        <ProgressBar
+            android:id="@+id/add_tag_progressbar"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="7.5dp"
+            android:indeterminateTint="@color/LightGreen"/>
+        <ImageView
+            android:id="@+id/guideline8"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="?attr/HomeBackGround"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/addTag_toolbar_cons"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/guideline1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="10dp">
+                <ImageView
+                    android:id="@+id/add_tag_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/HomeBackGround"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_add_photo"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/hashtag_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="해시태그"
+                android:textColor="?attr/BlackToWhite"
+                android:layout_margin="15dp"
+                app:layout_constraintTop_toBottomOf="@id/cardview2"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <EditText
+                android:id="@+id/tag_hashtag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textSize="20dp"
+                android:textColor="?attr/BlackToWhite"
+                android:textStyle="bold"
+                android:hint="해시태그를 입력해 주세요"
+                android:textColorHint="@color/Grey"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintTop_toBottomOf="@id/hashtag_title"/>
+
+            <TextView
+                android:id="@+id/description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설명"
+                android:textColor="?attr/BlackToWhite"
+                android:layout_margin="15dp"
+                app:layout_constraintTop_toBottomOf="@id/tag_hashtag"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <EditText
+                android:id="@+id/tag_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textSize="20dp"
+                android:textColor="?attr/BlackToWhite"
+                android:textStyle="bold"
+                android:hint="게시물에 대해 설명해 주세요"
+                android:textColorHint="@color/Grey"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toBottomOf="@id/description_title"/>
+
+            <CheckBox
+                android:id="@+id/privacyBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="익명으로 게시하기"
+                android:buttonTint="@color/LightGreen"
+                android:textColor="?attr/BlackToWhite"
+                app:layout_constraintTop_toBottomOf="@id/tag_description"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:fontFamily="@font/nanumbarungothic_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:checked="true"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

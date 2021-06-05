@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AuthActivity"
+    android:background="?attr/WhiteToDarkGrey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/auth_topcons1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/auth_topimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/auth_img_default_blur"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient1"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/auth_appicon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/app_icon_512"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"/>
+
+    <TextView
+        android:id="@+id/auth_welcometitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27.5dp"
+        android:layout_marginTop="12.5dp"
+        android:textAlignment="center"
+        android:textColor="?attr/BlackToWhite"
+        android:fontFamily="@font/paybooc_bold"
+        android:lineSpacingExtra="7.5dp"
+        android:text="홍스토리에 오신 것을\n환영합니다"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auth_appicon"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signinGoogle"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/roundcorner_bg1"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/auth_welcometitle"
+        app:layout_constraintBottom_toTopOf="@id/auth_bottom_notice">
+
+        <ImageView
+            android:id="@+id/googleicon1"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/google_icon"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/signinGoogleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Google로 계속하기"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:layout_marginLeft="27dp"
+            android:textColor="?attr/BlackToWhite"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/auth_bottom_notice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        android:layout_marginBottom="10dp"
+        android:textColor="?attr/DarkGreyToLightGrey"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorLink="@color/MyOpenChatColor"
+        android:text="계속 진행하면 홍스토리의 이용약관 및 개인정보\n처리방침에 동의한 것으로 간주됩니다."/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

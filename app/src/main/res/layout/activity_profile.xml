@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/WhiteToDarkGrey"
+    android:orientation="vertical"
+    tools:context=".Activities.ProfileActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/roundcorner_bg3"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
+        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/activity_bottom_nav_item" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/profile_appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/WhiteToDarkGrey"
+        android:fitsSystemWindows="true"
+        android:visibility="gone">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/profile_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/WhiteToDarkGrey"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/WhiteToDarkGrey">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8" />
+
+                <LinearLayout
+                    android:id="@+id/numoftagsLin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_userimg"
+                    app:layout_constraintLeft_toRightOf="@id/guideline24"
+                    app:layout_constraintTop_toTopOf="@id/profile_userimg">
+
+                    <TextView
+                        android:id="@+id/numOfTagsTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textColor="?attr/BlackToWhite"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="게시물"
+                        android:textAlignment="center"
+                        android:textColor="@color/Grey"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_userimg"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/app_icon_512"
+                    android:transitionName="profile_img_transition"
+                    app:civ_border_color="?attr/WhiteToDarkGrey"
+                    app:civ_border_width="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/userNameNDescLine1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_userimg"
+                    app:layout_constraintLeft_toRightOf="@id/profile_userimg"
+                    app:layout_constraintRight_toLeftOf="@id/guideline24"
+                    app:layout_constraintTop_toTopOf="@id/profile_userimg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profile_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="Username"
+                            android:textAlignment="textStart"
+                            android:textColor="?attr/BlackToWhite"
+                            android:textSize="20dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/verifiedIcon"
+                            android:layout_width="15.5dp"
+                            android:layout_height="15.5dp"
+                            android:layout_marginLeft="3.5dp"
+                            android:layout_marginTop="4.5dp"
+                            android:src="@drawable/ic_verified_user"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@id/profile_username"
+                            app:layout_constraintLeft_toRightOf="@id/profile_username"
+                            app:layout_constraintTop_toTopOf="@id/profile_username"
+                            app:tint="@color/LightGreen" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <kr.co.prnd.readmore.ReadMoreTextView
+                        android:id="@+id/profile_userbio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:gravity="center"
+                        android:linksClickable="true"
+                        android:text="Bio"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/BlackToWhite"
+                        android:textColorLink="@color/LightGreen"
+                        android:textSize="14dp"
+                        android:textStyle="normal"
+                        app:readMoreColor="@color/Grey"
+                        app:readMoreMaxLine="3"
+                        app:readMoreText=" ...더보기" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_toolbar_cons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/WhiteToDarkGrey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/profile_add_tag"
+            android:layout_width="27.5dp"
+            android:layout_height="27.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_add"
+            android:backgroundTint="?attr/BlackToWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbar_username_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:maxLength="10"
+            android:text="UID"
+            android:textColor="?attr/BlackToWhite"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/editProfileBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_edit"
+            android:backgroundTint="?attr/BlackToWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_tag_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="56dp"
+        android:background="?attr/WhiteToDarkGrey"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ProgressBar
+        android:id="@+id/profile_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/SkyBlue" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/WhiteToDarkGrey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/logout_dialog_profile"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/app_icon_512"/>
+
+            <TextView
+                android:id="@+id/logout_dialog_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="로그아웃 하겠습니까?"
+                android:textColor="@color/MyOpenChatColor"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumbarungothic"
+                android:layout_marginLeft="7dp"
+                app:layout_constraintTop_toTopOf="@id/logout_dialog_profile"
+                app:layout_constraintBottom_toBottomOf="@id/logout_dialog_profile"
+                app:layout_constraintLeft_toRightOf="@id/logout_dialog_profile"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/logout_dialog_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="로그아웃"
+                android:textColor="@color/White"
+                android:textAllCaps="false"
+                android:background="@drawable/roundcorner_bg4"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/logout_dialog_profile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/HomeBackGround">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/WhiteToDarkGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/app_icon_512"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/uploaderInfoLin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="3.5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/profileimg"
+            app:layout_constraintLeft_toRightOf="@id/profileimg"
+            app:layout_constraintTop_toTopOf="@id/profileimg">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:maxLines="1"
+                    android:text="Username"
+                    android:textColor="?attr/BlackToWhite"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/verifiedIcon"
+                    android:layout_width="13.5dp"
+                    android:layout_height="13.5dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/ic_verified_user"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/txtUserName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/LightGreen" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="MMM d yyyy a h:mm"
+                android:textColor="@color/Grey"
+                android:textSize="12dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/moreBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_more_horiz"
+            android:backgroundTint="?attr/BlackToWhite"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/uploaderInfoLin1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/taginfoLin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/profileimg">
+
+            <TextView
+                android:id="@+id/txtHashtags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:maxLines="2"
+                android:text="#Hashtags"
+                android:textColor="?attr/BlackToWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <kr.co.prnd.readmore.ReadMoreTextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingExtra="2dp"
+                android:linksClickable="true"
+                android:text="Descriptions"
+                android:textColor="?attr/BlackToWhite"
+                android:textColorLink="@color/MyOpenChatColor"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                app:readMoreColor="@color/Grey"
+                app:readMoreMaxLine="3"
+                app:readMoreText=" ...더보기" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/row_post_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/WhiteSmokeToDarkGrey"
+            android:maxHeight="3.5in"
+            android:scaleType="centerCrop"
+            android:transitionName="post_detail_img_transition"
+            app:layout_constraintTop_toBottomOf="@id/taginfoLin1"
+            app:srcCompat="@drawable/app_icon_512"/>
+
+        <ImageView
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7.5dp"
+            android:background="?attr/OtherOpenChatColor"
+            app:layout_constraintTop_toBottomOf="@id/likeCount" />
+
+        <LinearLayout
+            android:id="@+id/likeLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline23"
+            app:layout_constraintTop_toBottomOf="@id/line6">
+
+            <Button
+                android:id="@+id/likeBtn"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_like"
+                android:backgroundTint="@color/Grey"/>
+            <TextView
+                android:id="@+id/likeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="좋아요"
+                android:textColor="@color/Grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commentLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/likeLine"
+            app:layout_constraintLeft_toRightOf="@id/guideline23"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/likeLine">
+            <ImageView
+                android:id="@+id/commentBtn"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_comment"
+                android:backgroundTint="@color/Grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="댓글 달기"
+                android:textColor="@color/Grey" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/likeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7.5dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="-"
+            android:textColor="?attr/BlackToWhite"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/row_post_img" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

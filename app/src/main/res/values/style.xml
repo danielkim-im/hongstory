@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/White</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/White</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="WhiteToBlack">#fff</item>
+        <item name="BlackToWhite">#000</item>
+        <item name="WhiteSmokeToDarkGrey">#f4f4f4</item>
+        <item name="LightGreyToDarkGrey">#D3D3D3</item>
+        <item name="DarkGreyToLightGrey">@color/DarkGrey</item>
+        <item name="CommentLightToDarkMode">#f4f4f4</item>
+        <item name="OtherOpenChatColor">#f0f0f0</item>
+        <item name="WhiteToDarkGrey">#fff</item>
+        <item name="HomeBackGround">#F4F4F4</item>
+        <item name="CardItemBackGround">#FCFCFC</item>
+        <item name="RecTagBG">#30ffffff</item>
+    </style>
+
+    <style name="darkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/DarkGrey</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/DarkGrey</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="WhiteToBlack">#000</item>
+        <item name="BlackToWhite">#fff</item>
+        <item name="WhiteSmokeToDarkGrey">@color/DarkGrey</item>
+        <item name="LightGreyToDarkGrey">@color/DarkGrey</item>
+        <item name="DarkGreyToLightGrey">#D3D3D3</item>
+        <item name="CommentLightToDarkMode">@color/DarkGrey</item>
+        <item name="OtherOpenChatColor">#2e2e2e</item>
+        <item name="WhiteToDarkGrey">@color/DarkGrey</item>
+        <item name="HomeBackGround">#18191B</item>
+        <item name="CardItemBackGround">#171717</item>
+        <item name="RecTagBG">#30000000</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

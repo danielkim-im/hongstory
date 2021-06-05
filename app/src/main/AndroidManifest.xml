@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teamhns.hnsmobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_512"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_512"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.CreateQAActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Activities.SearchPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ExploreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ReportCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.InAppUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ProfileImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PostDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.QuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreatePostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".Activities.EditPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ViewAllCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ServerDownActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

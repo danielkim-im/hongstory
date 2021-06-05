@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">홍스토리</string>
+
+    <string-array name="report_reason_items">
+        <item>성적인 콘텐츠</item>
+        <item>폭력적 또는 혐오스러운 콘텐츠</item>
+        <item>증오 또는 악의적인 콘텐츠</item>
+        <item>유해하거나 위험한 행위</item>
+        <item>아동 학대</item>
+        <item>권리 침해</item>
+        <item>테러 조장</item>
+        <item>스팸 또는 오해의 소지가 있는 콘텐츠</item>
+    </string-array>
+</resources>
