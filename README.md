@@ -1,5 +1,5 @@
 # hongstory
 
-홍스토리: 용인홍천고등학교 익명 커뮤니티 앱 (https://play.google.com/store/apps/details?id=com.teamhns.hnsmobile)
+Hongstory is a Yongin Hongchun Highschool(YHHS) anonymous community android app developed by TeamHNS(Daniel Euichan Kim[11202], Lee Do-yoon[11110]). Hongstory is a service limited to YHHS students, teachers, or other associated personnel who is holding an email account provided by YHHS(hongchun.hs.kr). Currently, the project is terminated and the database is set to read-only mode for authenticated users. Hongstory is available for download on Google Play Store(https://play.google.com/store/apps/details?id=com.teamhns.hnsmobile).
 
-안드로이드 스튜디오 (자바) + 구글 파이어베이스
+*technologies used: Java, Firebase, etc.
